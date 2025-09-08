@@ -2,223 +2,228 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: "elchemista",
   },
-  /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
-  base: '/gitprofile/',
+
+  // If deploying to https://<USERNAME>.github.io/, set base to '/'.
+  // If deploying to https://<USERNAME>.github.io/<REPO_NAME>/, set base to '/<REPO_NAME>/'.
+  base: "/gitprofile/",
+
   projects: {
     github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      display: true,
+      header: "Github Projects",
+      mode: "automatic",
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        sortBy: "stars",
+        limit: 6,
         exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          forks: false,
+          projects: [
+            "elchemista/rassifier",
+            "elchemista/agent_dsl",
+            "elchemista/fuzler",
+          ],
         },
       },
       manual: {
-        // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ["elchemista/gitprofile", "elchemista/pandora"],
       },
     },
+
     external: {
-      header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
+      header: "My Projects",
       projects: [
         {
-          title: 'Project Name',
+          title: "Arcatech",
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            "Online system for mechanical parts catalogs, orders, and supplier workflows. AI agent requests availability/prices via Email/WhatsApp and updates the DB in real time. Built end-to-end with Elixir/Phoenix LiveView in 4 weeks.",
+          imageUrl: "https://elchemista.com/images/arcatech.webp",
+          link: "https://arcatech.fly.dev/",
         },
         {
-          title: 'Project Name',
+          title: "Yacht & Tours",
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            "Boat-booking platform with price search/filters, calendar & pricing management, guest–host chat, real-time notifications, Stripe payments, e-invoicing, admin dashboard, and MMK sync. Built with Elixir/LiveView + Svelte; scalable and distributed.",
+          imageUrl: "https://elchemista.com/images/yachtandtours.webp",
+          link: "https://yachtandtours.fly.dev/",
+        },
+        {
+          title: "RedoMap",
+          description:
+            "Embeddable Svelte web app for navigator-style exploration—no installs or registration. QR to start, paid map sales, builder dashboard, and browser audio guides. AI assists content; analytics reveal visitor interests. Live for 5+ years.",
+          imageUrl: "https://elchemista.com/images/redomap.webp",
+          link: "https://www.redomap.com/en/",
+        },
+        {
+          title: "Consulente Tech (beta)",
+          description:
+            "AI-assisted job posts and proposals connecting clients with freelancers. Structured quotes, direct chat, and org teams for freelancers. First version live and collecting feedback. Built with Phoenix LiveView.",
+          imageUrl: "https://elchemista.com/images/consulente.webp",
+          link: "https://consulente.tech/",
         },
       ],
     },
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+
+  seo: {
+    title: "Portfolio of Yuriy Zhar",
+    description:
+      "I build revenue-driven products with AI—full-stack in Elixir, Go, Svelte & Rust (plus Python when it adds value). I help SMBs and e-commerce automate operations, reduce manual work, and sell more.",
+    imageURL: "https://elchemista.com/images/profile.webp",
+  },
+
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    researchGate: '',
-    facebook: '',
-    instagram: '',
-    reddit: '',
-    threads: '',
-    youtube: '', // example: 'pewdiepie'
-    udemy: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    discord: '',
-    telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    linkedin: "yuriy-zhar-207a37257",
+    x: "elchemista",
+    stackoverflow: "",
+    discord: "elchemista",
+    telegram: "",
+    website: "https://elchemista.com",
+    email: "elchemista@gmail.com",
   },
+
   resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: "https://elchemista.com/curriculum",
   },
+
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    "Elixir",
+    "Phoenix LiveView",
+    "Go",
+    "Svelte",
+    "TypeScript",
+    "Rust",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "AWS",
+    "AWS Lambda",
+    "AWS IoT Core",
+    "Docker",
+    "Git",
+    "Tailwind CSS",
+    "Stripe",
+    "RAG/LLM",
   ],
+
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      company: "Yacht & Tours (Campania Nautica e Turismo Srls)",
+      position: "Developer & Consultant (Self-Employed)",
+      from: "April 2025",
+      to: "Present",
+      companyLink: "https://yachtandtours.fly.dev/",
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: "MAXWELL GROUP SRL",
+      position: "Back-End Consultant (Self-Employed)",
+      from: "January 2019",
+      to: "Present",
+      companyLink: "",
     },
-  ],
-  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      company: "RDM SRL",
+      position: "Full-Stack Web Developer",
+      from: "April 2018",
+      to: "April 2025",
+      companyLink: "",
+    },
+    {
+      company: "CLUSTERCORE SRL",
+      position: "Back-End Developer",
+      from: "June 2021",
+      to: "April 2022",
+      companyLink: "",
+    },
+    {
+      company: "E-SOUL SRL",
+      position: "Full-Stack Web Developer",
+      from: "May 2017",
+      to: "September 2018",
+      companyLink: "",
+    },
+    {
+      company: "Paradox Engineering",
+      position: "Software Developer",
+      from: "January 2015",
+      to: "July 2015",
+      companyLink: "",
+    },
+    {
+      company: "I.T. Computer Di Daniela Gasparini",
+      position: "System Administrator",
+      from: "June 2014",
+      to: "July 2015",
+      companyLink: "",
     },
   ],
+
+  certifications: [],
+
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: "I.T.I.S. Magistri Cumacini, Lazzago (Como), Italy",
+      degree: "Senior IT Engineering Technician",
+      from: "2014",
+      to: "2014",
     },
   ],
-  publications: [
-    {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
-      journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-  ],
-  // Display articles from your medium or dev account. (Optional)
+
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    source: "dev",
+    username: "", // Hide blog section
+    limit: 2,
   },
-  googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-  },
-  // Track visitor interaction and behavior. https://www.hotjar.com
-  hotjar: { id: '', snippetVersion: 6 },
+
+  googleAnalytics: { id: "" },
+  hotjar: { id: "", snippetVersion: 6 },
+
   themeConfig: {
-    defaultTheme: 'lofi',
-
-    // Hides the switch in the navbar
-    // Useful if you want to support a single color mode
-    disableSwitch: false,
-
-    // Should use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded defaultTheme
+    defaultTheme: "dracula",
+    disableSwitch: true,
     respectPrefersColorScheme: false,
-
-    // Display the ring in Profile picture
     displayAvatarRing: true,
-
-    // Available themes. To remove any theme, exclude from here.
     themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'dim',
-      'nord',
-      'sunset',
-      'caramellatte',
-      'abyss',
-      'silk',
-      'procyon',
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "nord",
+      "sunset",
+      "caramellatte",
+      "abyss",
+      "silk",
+      "procyon",
     ],
   },
 
-  // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
       class="text-primary" href="https://github.com/arifszn/gitprofile"
       target="_blank"
