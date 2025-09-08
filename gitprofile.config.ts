@@ -170,14 +170,14 @@ const CONFIG = {
     },
   ],
 
-  blog: {
-    source: "dev",
-    username: "", // Hide blog section
-    limit: 2,
-  },
+  // blog: {
+  //   source: "dev",
+  //   username: "", // Hide blog section
+  //   limit: 2,
+  // },
 
   googleAnalytics: { id: "" },
-  hotjar: { id: "", snippetVersion: 6 },
+  // hotjar: { id: "", snippetVersion: 6 },
 
   themeConfig: {
     defaultTheme: "dracula",
